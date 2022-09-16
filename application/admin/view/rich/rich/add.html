@@ -1,0 +1,76 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Red_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-red_num" data-rule="required" class="form-control " rows="5" name="row[red_num]" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Blue_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-blue_num" data-rule="required" class="form-control " rows="5" name="row[blue_num]" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-type" data-rule="required" class="form-control" name="row[type]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <div class="radio">
+            {foreach name="statusList" item="vo"}
+            <label for="row[status]-{$key}"><input id="row[status]-{$key}" name="row[status]" type="radio" value="{$key}" {in name="key" value="2"}checked{/in} /> {$vo}</label> 
+            {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_bet')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-is_bet" data-rule="required" class="form-control" name="row[is_bet]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Number_periods')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-number_periods" class="form-control" name="row[number_periods]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lottery_date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-lottery_date" class="form-control" name="row[lottery_date]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Prize_number')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-prize_number" class="form-control" name="row[prize_number]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Original_number')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-original_number" class="form-control" name="row[original_number]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Prize_money')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-prize_money" class="form-control" name="row[prize_money]" type="text">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
